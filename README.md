@@ -46,20 +46,16 @@ sistema.
 (esp_task_wdt_add) e o alimenta periodicamente (esp_task_wdt_reset). O
 WDT evita travamentos: se uma tarefa “travar” e não resetar o WDT dentro do
 tempo, o sistema pode acionar um panic/reset (configurável).
-• (Opcional) Você pode citar outras medidas: validação de retornos, backoff em
-reconexões, logs de falhas.
 6) Alerta e logs
 • LED no GPIO2 pisca 3× em caso de rede não autorizada, servindo como
 sinalização imediata.
 • Logs:
 o OK: “OK: rede autorizada: 'SSID'”.
 o ALERTA: “ALERTA: rede NAO AUTORIZADA: 'SSID'”.
-Esses logs são os prints exigidos no trabalho (copie do Serial para o PDF).
 7) Testes (o que você imprime)
 • Print 1: boot + conexão ao Wokwi-GUEST (mostrar SSID e IP no Serial).
 • Print 2: mensagem de OK (rede autorizada).
-• Print 3: mensagem de ALERTA (rede não autorizada) + evidência do LED piscando
-(tela do Wokwi com o LED aceso).
+• Print 3: mensagem de ALERTA (rede não autorizada) + evidência do LED piscando.
 No Wokwi, como só existe o AP Wokwi-GUEST, você pode remover esse SSID da whitelist
 (ou usar o botão STRICT, se deixou no sketch) para forçar o cenário de alerta.
 8) Limitações e variações
